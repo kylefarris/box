@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 	config.vm.define "base", primary: true do |base|
-		base.vm.box_url = "http://labs.o3dev.com/box/base.box"
+		base.vm.box_url = "https://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.5-x86_64-v20140504.box"
 		base.vm.box = "base"
 		base.vm.synced_folder ENV['HOME'] + "/sync", "/sync", create: true, type: "nfs"
 		base.vm.network "private_network", ip: "192.168.200.2"
